@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: ["sblab-frontend-qayyum22.vercel.app"],
+		origin: ["https://sblab-frontend-qayyum22.vercel.app"],
 		credentials: true,
 	})
 )
