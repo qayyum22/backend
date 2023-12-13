@@ -11,7 +11,7 @@ const searchRoute = require("./routes/Search");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const {cloudinaryConnect } = require("./config/cloudinary");
+const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
@@ -25,15 +25,15 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:["http://localhost:3000"],
-		credentials:true,
+		origin: ["https://sblab-backend.vercel.app/"], ["https://sblab-backend-git-main-qayyum22.vercel.app/"],
+		credentials: true,
 	})
 )
 
 app.use(
 	fileUpload({
-		useTempFiles:true,
-		tempFileDir:"/tmp",
+		useTempFiles: true,
+		tempFileDir: "/tmp",
 	})
 )
 //cloudinary connection
@@ -52,8 +52,8 @@ app.use("/api/v1/search", searchRoute)
 
 app.get("/", (req, res) => {
 	return res.json({
-		success:true,
-		message:'Your server is up and running....'
+		success: true,
+		message: 'Your server is up and running....'
 	});
 });
 
