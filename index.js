@@ -32,7 +32,7 @@ app.use(
   //   allowedHeaders: ["Content-Type", "Authorization", "X-Auth-Token"]
   // }
 	  {
-  "origin": "*",
+  "origin": ["https://frontend-qayyum22.vercel.app"],
   credentials: true
 }
   )
