@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: ["http://localhost:3000"],
+		origin: ["http://localhost:3000","https://frontend-qayyum22.vercel.app"],
 		credentials: true,
 		allowedHeaders: ["Content-Type", "Authorization"]
 	})
