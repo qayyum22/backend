@@ -24,12 +24,20 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors({
-    origin: ["*"], 
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization", "X-Auth-Token"]
-  })
+  cors(
+	 //  {
+  //   origin: ["*"], 
+  //   credentials: true,
+  //   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  //   allowedHeaders: ["Content-Type", "Authorization", "X-Auth-Token"]
+  // }
+	  {
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}
+  )
 );
 
 
