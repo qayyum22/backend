@@ -24,7 +24,7 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "https://frontend-qayyum22.vercel.app",
+  origin: "*",
   credentials: true,
 }));
 
