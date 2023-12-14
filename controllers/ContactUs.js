@@ -69,8 +69,15 @@ exports.contact = async (req, res) => {
 };
 
 exports.testing = async (req, res) => {
-  res.status.json({
-    success: "true",
-    message: "Backend is working fine",
-  })
+  try {
+    res.status(200).json({
+      success: true,
+      message: "Backend is working fine",
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
 }
