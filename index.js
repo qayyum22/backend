@@ -24,14 +24,13 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-	cors({
-		origin: ["http://localhost:3000","https://frontend-qayyum22.vercel.app"],
-		credentials: true,
-		allowedHeaders: ["*"],
-		allowedHeaders: ["POST", "GET", "OPTIONS", "PUT", "DELETE"],
-		allowedHeaders: ["Content-Type","X-Auth-Token", "Origin", "Authorization"]
-	})
-)
+  cors({
+    origin: ["http://localhost:3000", "https://frontend-qayyum22.vercel.app"], 
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Auth-Token"]
+  })
+);
 
 app.use(
 	fileUpload({
