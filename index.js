@@ -28,7 +28,7 @@ app.use(
 		origin: ["http://localhost:3000","https://frontend-qayyum22.vercel.app"],
 		credentials: true,
 		allowedHeaders: ["*"],
-		allowedHeaders; ["POST", "GET", "OPTIONS", "PUT", "DELETE"],
+		allowedHeaders: ["POST", "GET", "OPTIONS", "PUT", "DELETE"],
 		allowedHeaders: ["Content-Type","X-Auth-Token", "Origin", "Authorization"]
 	})
 )
