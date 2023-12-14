@@ -29,6 +29,7 @@ app.use(
 			"https://sblab-frontend.vercel.app",
 			 "https://sblab-frontend-git-main-qayyum22.vercel.app"],
 		credentials: true,
+		allowedHeaders: ["Content-Type", "Authorization"]
 	})
 )
 
