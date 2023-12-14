@@ -27,7 +27,9 @@ app.use(
 	cors({
 		origin: ["http://localhost:3000","https://frontend-qayyum22.vercel.app"],
 		credentials: true,
-		allowedHeaders: ["Content-Type", "Authorization"]
+		allowedHeaders: ["*"],
+		allowedHeaders; ["POST", "GET", "OPTIONS", "PUT", "DELETE"],
+		allowedHeaders: ["Content-Type","X-Auth-Token", "Origin", "Authorization"]
 	})
 )
 
