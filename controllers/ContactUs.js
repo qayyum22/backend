@@ -67,3 +67,10 @@ exports.contact = async (req, res) => {
     })
   }
 };
+
+exports.testing = async (req, res) => {
+  res.status.json({
+    success: "true",
+    message: "Backend is working fine",
+  })
+}
