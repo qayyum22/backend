@@ -23,20 +23,15 @@ database.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors(
-	 //  {
-  //   origin: ["*"], 
-  //   credentials: true,
-  //   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  //   allowedHeaders: ["Content-Type", "Authorization", "X-Auth-Token"]
-  // }
-	  {
-  "Access-Control-Allow-Origin": ["http://frontend-qayyum22.vercel.app"],
-  credentials: true
-}
-  )
-);
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://frontend-qayyum22.vercel.app",
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true,
+}));
 
 
 app.use(
